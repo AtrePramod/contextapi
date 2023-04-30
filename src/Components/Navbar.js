@@ -1,16 +1,23 @@
 import React from 'react'
+import { ThemeContext } from '../contexts/ThemeContext';
 
 export class Navbar extends React.Component {
+    static contextType = ThemeContext;
     render() {
+        const { isDarkTheme, darkTheme, lightTheme } = this.context;
+        const theme = isDarkTheme ? darkTheme : lightTheme;
         return (
-            <nev>
-                <h2 className='ui centered herder'>
+            <nav style={{ background: theme.background, color: theme.text, height: '120px' }}>
+                <h2 className='ui centered header'>
                     Oak Acadmy
                 </h2>
-                <button className='ui button'>Overview</button>
-                <button className='ui button'>Contact</button>
-                <button className='ui button'>Support</button>
-            </nev>
+                <div className='ui three buttons'>
+                    <button className='ui button'>Overview</button>
+                    <button className='ui button'>Contact</button>
+                    <button className='ui button'>Support</button>
+                </div>
+            </nav>
+
         )
     }
 }

@@ -8,7 +8,7 @@ export class Navbar extends React.Component {
         const theme = isDarkTheme ? darkTheme : lightTheme;
         return (
             <nav style={{ background: theme.background, color: theme.text, height: '120px' }}>
-                <h2 className='ui centered header'>
+                <h2 style={{ textAlign: 'center' }}>
                     Oak Acadmy
                 </h2>
                 <div className='ui three buttons'>

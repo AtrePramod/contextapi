@@ -8,7 +8,7 @@ export class TodoList extends React.Component {
 
         return (
             <div style={{
-                background: theme.background, color: theme.text
+                background: theme.background, color: theme.text, height: '140px', textAlign: 'center'
             }} className='ui list'>
                 <p className='items'>Paln the family trip</p>
                 <p className='items'> Go to shopping </p>
